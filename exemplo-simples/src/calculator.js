@@ -3,7 +3,7 @@ window.calculator = window.calculator || {};
 
 (function() {
 	var getIntById = function(id) {
-		return parseInt($(`#${id}`).val(), 10);
+		return parseInt($('#' + id).val(), 10);
 	};
 
 	var calculate = function() {

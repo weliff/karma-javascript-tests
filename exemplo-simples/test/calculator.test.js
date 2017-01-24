@@ -1,26 +1,16 @@
-/*
- * Unit tests for lib/calculator.js
- */
-
 describe('Calculadora', function() {
   
   beforeAll(function(){
     fixture.setBase('test/fixtures')
   });
   
-  // inject the HTML fixture for the tests
   beforeEach(function() {
     fixture.load('calculator.fixture.html');
+    window.calculator.init();
   });
 
-  // remove the html fixture from the DOM
   afterEach(function() {
     fixture.cleanup()
-  });
-
-  // call the init function of calculator to register DOM elements
-  beforeEach(function() {
-    window.calculator.init();
   });
 
   it('deve retorna 3 ao somar 1 + 2', function() {
